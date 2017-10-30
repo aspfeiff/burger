@@ -3,37 +3,37 @@ var orm = require('../config/orm.js');
 
 var burger = {
 
-  selectAll: function(cb) {
+	selectAll: function(cb) {
 
-    orm.selectAll('burgers', function(res) {
+		orm.selectAll('burgers', function(res) {
 
-      cb(res);
+			cb(res);
 
-    });
+		});
 
-  },
-
-
-  insertOne: function(cols, vals, cb) {
-
-    orm.insertOne('burgers', cols, vals, function(res) {
-
-      cb(res);
-
-    });
-
-  },
+	},
 
 
-  updateOne: function(objColVals, condition, cb) {
+	insertOne: function(cols, vals, cb) {
 
-    orm.updateOne('burgers', objColVals, condition, function(res) {
+		orm.insertOne('burgers', cols, vals, function(res) {
 
-      cb(res);
+			cb(res);
 
-    });
+		});
 
-  }
+	},
+
+
+	updateOne: function(objColVals, condition, cb) {
+
+		orm.updateOne('burgers', objColVals, condition, function(res) {
+
+			cb(res);
+
+		});
+
+	}
 
 };
 

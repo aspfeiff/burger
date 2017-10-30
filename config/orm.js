@@ -3,29 +3,29 @@ var connection = require ('./connection.js');
 
 function printQuestionMarks(num){
 
-  var arr = [];
+	var arr = [];
 
-  for (var i=0; i<num; i++){
+	for (var i=0; i<num; i++){
 
-    arr.push('?')
+		arr.push('?')
 
-  };
+	};
 
-  return arr.toString();
+	return arr.toString();
 };
 
 
 
 function objToSql(ob){
 
-  var arr = [];
+	var arr = [];
 
-  for (var key in ob) {
+	for (var key in ob) {
 
-    arr.push(key + '=' + ob[key]);
-  };
+		arr.push(key + '=' + ob[key]);
+	};
 
-  return arr.toString();
+	return arr.toString();
 };
 
 var orm = {
